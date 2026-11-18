@@ -1,0 +1,108 @@
+AC Coach - app para Assetto Corsa
+=================================
+
+INSTALAR
+1. Extraia o zip e copie a pasta "ac_coach" para:
+   <pasta do Assetto Corsa>\apps\python\
+   (ex.: C:\Program Files (x86)\Steam\steamapps\common\assettocorsa\apps\python\ac_coach)
+2. Ative o app:
+   - Content Manager: Configuracoes > Assetto Corsa > Python apps > marque "AC Coach"
+   - Launcher original: Options > General > UI Modules > marque "ac_coach"
+3. No jogo, passe o mouse na borda direita da tela e clique em "AC Coach" na barra de apps.
+
+VERSAO STANDALONE (SEM SIMHUB)
+- Tudo aparece dentro do jogo, em duas janelas:
+  "AC Coach": botao "Ref", marcha, delta, velocidade x referencia, painel de frenagem.
+  "AC Coach - Dica": resultado da ultima curva e a dica. Abre junto e se arrasta separado.
+  Fica so uma tira fina enquanto nao ha nada para dizer.
+- Botao "Limpar pista" no rodape: clique duas vezes em ate 3 s para apagar as voltas
+  deste carro/pista.
+- ATALHOS (opcionais): Alt+1 Minha ideal, Alt+2 Minha melhor, Alt+3 IA, Alt+4..8 niveis,
+  Alt+0 proxima. Precisam do _ctypes.pyd, que nao vem no Python do AC. O app procura em
+  ac_coach\stdlib64 e em apps\python\SimHub\stdlib64. Sem ele, use o botao "Ref".
+
+USAR
+- De uma volta limpa: ela vira a referencia. Com 2+ voltas o app monta a VOLTA IDEAL
+  (seus melhores trechos juntos). Ficam salvas as 8 melhores de cada carro/pista em ac_coach\data.
+- Botao "Ref" (canto superior) abre o menu de referencia:
+    Minha ideal / Minha melhor / IA (gravada) / Iniciante / Intermediario / Avancado /
+    Expert / Profissional
+  Cada item mostra o tempo de volta daquela referencia.
+- A referencia escolhida fica GRAVADA por carro/pista (ac_coach\data\modo.json). Ao
+  reabrir o jogo, o app volta na mesma opcao em que voce estava.
+
+MARCHA
+- O numero grande a esquerda do delta e a marcha em que voce DEVERIA estar - a que a
+  referencia usa nesse ponto da pista. Nao e a sua marcha atual.
+- Quando voce esta em outra marcha, aparece um CIRCULO ambar em volta do numero e,
+  logo abaixo, "voce: N" com a marcha em que voce esta.
+- Os niveis prontos e a volta da IA sao simulados e nao tem marcha propria. Nesses
+  casos o app usa a marcha da sua volta mais rapida que tenha marcha gravada - num
+  mesmo ponto da pista a marcha e praticamente sempre a mesma.
+- Por isso o indicador precisa de PELO MENOS UMA volta sua gravada a partir desta
+  versao. Enquanto nao houver nenhuma, ele mostra "-". O app segura essa volta mesmo
+  que ela nao esteja entre as 8 mais rapidas, para o indicador nao voltar a sumir.
+
+ABAIXO DA VELOCIDADE (janela vermelha)
+- Quando voce esta mais de 3 km/h abaixo da referencia no ponto onde esta, a janela
+  fica vermelha: fundo, marcha, velocidade e o painel.
+- O limite esta em SPEED_RED, no inicio de coach_core.py. Suba para 5 ou 6 se achar
+  que fica vermelho demais.
+
+VOLTA FORA DA PISTA (filtro de tracado)
+- Uma volta que passou por fora da pista NAO vira referencia, mesmo que seja a mais
+  rapida. A mensagem no topo mostra: "Volta X passou N m fora do tracado".
+- Por que: o canal de rodas fora do jogo nao pega todos os casos. Uma volta que alarga
+  para a area de escape pode marcar zero rodas fora, virar a "melhor volta" e ai o app
+  passa a cobrar um ponto de freada e uma velocidade impossiveis de repetir na pista.
+- Como funciona: todas as voltas ficam na mesma grade de posicao da pista, entao da
+  para medir direto a distancia entre elas ponto a ponto. Duas voltas legitimas ficam a
+  poucos metros uma da outra; uma que saiu fica a dezenas de metros.
+- Limite em OFFTRACK_M (14 m, pista de ~13 m de largura). So comeca a valer depois de
+  2 voltas guardadas; se TODAS as suas voltas saem no mesmo lugar, o filtro nao acusa.
+
+NIVEIS PRONTOS
+- Sao voltas simuladas para o SEU carro na pista atual. O app mede a curvatura de cada
+  trecho da pista (pela posicao do carro) e o limite do carro (aderencia em curva,
+  frenagem e aceleracao) a partir das suas voltas, e simula a volta de cada nivel:
+      Nivel          aderencia em curva   frenagem   aceleracao
+      Iniciante            78%               55%        85%
+      Intermediario        85%               68%        90%
+      Avancado             91%               80%        95%
+      Expert               96%               90%        98%
+      Profissional        100%              100%       100%
+  "100%" = 5% acima do maximo que voce ja mostrou com esse carro (LIMIT_MARGIN).
+- Quanto mais voce andar no limite, mais precisos ficam os niveis.
+- Os niveis sao calculados ao carregar a pista, NAO a cada volta fechada: a conta e
+  pesada (simula a volta inteira varias vezes por nivel) e travava o jogo na hora de
+  cruzar a linha. Quando voce faz uma volta melhor, eles sao refeitos na proxima vez
+  que voce abrir o menu "Ref" - por isso o menu pode demorar um instante para abrir.
+- Precisa de pelo menos 1 volta gravada nesta versao (as antigas nao tem o tracado).
+- Para ajustar os niveis, edite a tabela LEVELS em coach_core.py.
+
+REFERENCIAS (referencias.json) - tempos dos niveis por carro/pista
+- Traz as 110 combinacoes carro+pista do modo carreira da SUA instalacao (nomes exatos,
+  tirados de content/career). A carreira original nao tem metas de tempo de volta, so
+  pontos e posicao; por isso so ha tempo onde existe fonte real:
+    Lotus Exige V6 Cup @ Silverstone GP = 2:18.122 (Track Titan)
+- Item com "tempo_profissional" vazio: os niveis usam a estimativa pelo limite do carro.
+  Quando souber um tempo real, preencha (ex.: "1:58.300") e o nivel passa a ser calibrado.
+- Profissional = tempo informado; Expert +2%, Avancado +4,2%, Intermediario +7,5%, Iniciante +11%.
+- "carro"/"pista": "=nome" = nome exato (o topo da janela mostra "carro @ pista").
+  Tambem aceita pedacos: ["exige", "!s3"] = contem "exige" e nao contem "s3".
+- Opcional: "tempos_niveis": {"Avancado": "2:24.000"} fixa o tempo de um nivel.
+- Pode acrescentar itens para qualquer carro/pista (mods tambem).
+
+IA (GRAVADA)
+- Em qualquer sessao com carros da IA do MESMO modelo que o seu (corrida, treino com IA),
+  o app grava automaticamente a volta mais rapida da IA e salva para esse carro/pista.
+- Aparece no menu como "IA (gravada)" e no rodape ("IA 2:24.4"). Pode usar como referencia
+  mesmo sem ter volta sua: pontos de freada e velocidades reais do seu carro na pista.
+- So troca quando a IA fizer uma volta mais rapida. Para a melhor referencia, use IA em 100%.
+- Se o jogo nao informar os pedais da IA, o freio e estimado pela desaceleracao
+  (testado nas suas voltas de Silverstone: 11 de 11 frenagens, erro de ate 2 m).
+- "Limpar pista" tambem apaga a volta da IA.
+
+PROBLEMAS
+- Se o app mostrar "erro:" no topo, o detalhe fica em
+  Documentos\Assetto Corsa\logs\py_log.txt  (linhas "[AC Coach]").

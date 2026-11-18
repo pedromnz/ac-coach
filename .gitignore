@@ -1,0 +1,15 @@
+# dados pessoais / personal data
+**/ac_coach/data/*.json
+**/ac_coach/live.txt
+# ctypes copiado do SimHub / copied from SimHub
+**/ac_coach/stdlib/
+**/ac_coach/stdlib64/
+# arquivos do Lovely Dashboard (nao redistribuir) / Lovely files (do not redistribute)
+simhub/dash/AC Coach Lovely/Central.djson*
+simhub/dash/AC Coach Lovely/Environment.djson*
+simhub/dash/AC Coach Lovely/Fuel.djson*
+simhub/dash/AC Coach Lovely/Session.djson*
+simhub/dash/AC Coach Lovely/_SHFonts/
+simhub/dash/AC Coach Lovely/JavascriptExtensions/Lovely-*
+__pycache__/
+*.pyc

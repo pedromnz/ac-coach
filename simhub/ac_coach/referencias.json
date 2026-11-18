@@ -1,0 +1,1291 @@
+{
+ "_como_usar": [
+  "Cada item = um carro + pista. 'tempo_profissional' define o nivel Profissional; os outros ficam",
+  "mais lentos: Expert +2%, Avancado +4,2%, Intermediario +7,5%, Iniciante +11%.",
+  "Item com tempo_profissional vazio: o app usa a estimativa pelo limite do carro (pode preencher depois).",
+  "carro / pista: '=nome' = nome exato do AC (como aparece no topo da janela do app, 'carro @ pista').",
+  "Tambem aceita pedacos: [\"exige\", \"!s3\"] = contem 'exige' e nao contem 's3'.",
+  "Opcional: \"tempos_niveis\": {\"Avancado\": \"2:24.000\"} fixa o tempo de um nivel.",
+  "eventos_carreira / nivel_ia_carreira: so informacao (tirado de content/career da sua instalacao).",
+  "A carreira original do AC nao tem metas de tempo de volta (so pontos de time attack e posicao),",
+  "por isso so ha tempo onde existe fonte real."
+ ],
+ "referencias": [
+  {
+   "nome": "lotus_exige_v6_cup @ ks_silverstone-gp",
+   "carro": "=lotus_exige_v6_cup",
+   "pista": "=ks_silverstone-gp",
+   "tempo_profissional": "2:18.122",
+   "fonte": "Track Titan",
+   "eventos_carreira": [
+    "N4 event5: Race Lotus Exige S at Silverstone"
+   ],
+   "nivel_ia_carreira": 98
+  },
+  {
+   "nome": "abarth500 @ ks_vallelunga-club_circuit",
+   "carro": "=abarth500",
+   "pista": "=ks_vallelunga-club_circuit",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "Intro event1: Training with Abarth 500",
+    "N1 event1: Training with Abarth 500",
+    "N1 event2: Abarth 500 SS at Vallelunga Club"
+   ],
+   "nivel_ia_carreira": 98
+  },
+  {
+   "nome": "alfa_romeo_giulietta_qv @ magione",
+   "carro": "=alfa_romeo_giulietta_qv",
+   "pista": "=magione",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "N1 event3: Testing Alfa Romeo Giulietta QV at Magione",
+    "N1 event4: Alfa Romeo Giulietta QV at Magione"
+   ],
+   "nivel_ia_carreira": 90
+  },
+  {
+   "nome": "bmw_m3_e30_s1 @ magione",
+   "carro": "=bmw_m3_e30_s1",
+   "pista": "=magione",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "N1 event5: BMW M3 E30 S1 at Magione"
+   ],
+   "nivel_ia_carreira": 95
+  },
+  {
+   "nome": "bmw_z4 @ ks_nurburgring-layout_sprint_b",
+   "carro": "=bmw_z4",
+   "pista": "=ks_nurburgring-layout_sprint_b",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "N2 event1: Training with BMW Z4 at Nurburgring GP Short"
+   ],
+   "nivel_ia_carreira": 98
+  },
+  {
+   "nome": "bmw_z4 @ ks_nurburgring-layout_sprint_a",
+   "carro": "=bmw_z4",
+   "pista": "=ks_nurburgring-layout_sprint_a",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "N2 event2: BMW challenge Z4 at Nurburgring GP Short"
+   ],
+   "nivel_ia_carreira": 90
+  },
+  {
+   "nome": "bmw_m3_e30_s1 @ ks_nurburgring-layout_sprint_b",
+   "carro": "=bmw_m3_e30_s1",
+   "pista": "=ks_nurburgring-layout_sprint_b",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "N2 event3: BMW challenge M3 E30 S1 at Nurburgring GP Short"
+   ],
+   "nivel_ia_carreira": 85
+  },
+  {
+   "nome": "bmw_m3_e92 @ ks_nurburgring-layout_sprint_a",
+   "carro": "=bmw_m3_e92",
+   "pista": "=ks_nurburgring-layout_sprint_a",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "N2 event4: BMW challenge M3 E92 at Nurburgring GP Short"
+   ],
+   "nivel_ia_carreira": 95
+  },
+  {
+   "nome": "bmw_1m @ ks_nurburgring-layout_gp_b",
+   "carro": "=bmw_1m",
+   "pista": "=ks_nurburgring-layout_gp_b",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "N2 event5: BMW challenge 1M at Nurburgring"
+   ],
+   "nivel_ia_carreira": 95
+  },
+  {
+   "nome": "bmw_z4_gt3 @ ks_nurburgring-layout_gp_a",
+   "carro": "=bmw_z4_gt3",
+   "pista": "=ks_nurburgring-layout_gp_a",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "N2 event6: Training with BMW Z4 GT3 at Nurburgring",
+    "GT1 event1: Race BMW Z4 GT3 at Nurburgring GP",
+    "GT2X event1: Race weekend 30L BMW Z4 GT3 at Nurburgring GP"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "ktm_xbow_r @ imola",
+   "carro": "=ktm_xbow_r",
+   "pista": "=imola",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "N3 event1: Training with KTM XBOW at Imola",
+    "N3 event2: KTM X-BOW R challenge at Imola",
+    "N3 event5: Ultra-light race at Imola"
+   ],
+   "nivel_ia_carreira": 98
+  },
+  {
+   "nome": "ktm_xbow_r @ ks_vallelunga-extended_circuit",
+   "carro": "=ktm_xbow_r",
+   "pista": "=ks_vallelunga-extended_circuit",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "N3 event3: KTM X-BOW R challenge at Vallelunga"
+   ],
+   "nivel_ia_carreira": 92
+  },
+  {
+   "nome": "ktm_xbow_r @ ks_nurburgring-layout_sprint_a",
+   "carro": "=ktm_xbow_r",
+   "pista": "=ks_nurburgring-layout_sprint_a",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "N3 event4: KTM X-BOW R challenge at Nurburgring Short"
+   ],
+   "nivel_ia_carreira": 95
+  },
+  {
+   "nome": "lotus_elise_sc @ ks_silverstone-national",
+   "carro": "=lotus_elise_sc",
+   "pista": "=ks_silverstone-national",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "N4 event1: TimeAttack Lotus Elise SC at Silverstone National"
+   ],
+   "nivel_ia_carreira": 98
+  },
+  {
+   "nome": "lotus_exige_240_s3 @ ks_silverstone-national",
+   "carro": "=lotus_exige_240_s3",
+   "pista": "=ks_silverstone-national",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "N4 event2: TimeAttack Lotus Exige 240R S3 at Silverstone National"
+   ],
+   "nivel_ia_carreira": 90
+  },
+  {
+   "nome": "lotus_evora_s_s2 @ ks_silverstone-international",
+   "carro": "=lotus_evora_s_s2",
+   "pista": "=ks_silverstone-international",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "N4 event3: Race Lotus Evora S S2 at Silverstone International"
+   ],
+   "nivel_ia_carreira": 90
+  },
+  {
+   "nome": "lotus_exige_s @ ks_silverstone-gp",
+   "carro": "=lotus_exige_s",
+   "pista": "=ks_silverstone-gp",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "N4 event4: TimeAttack Lotus Exige S at Silverstone"
+   ],
+   "nivel_ia_carreira": 92
+  },
+  {
+   "nome": "lotus_2_eleven @ magione",
+   "carro": "=lotus_2_eleven",
+   "pista": "=magione",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "N4 event6: Race Lotus 2-11 at Magione",
+    "T1 event1: Race Lotus 2-11 at Magione"
+   ],
+   "nivel_ia_carreira": 96
+  },
+  {
+   "nome": "lotus_evora_gtc @ imola",
+   "carro": "=lotus_evora_gtc",
+   "pista": "=imola",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "N4 event7: TimeAttack Lotus Evora GTC at Imola"
+   ],
+   "nivel_ia_carreira": 92
+  },
+  {
+   "nome": "mclaren_mp412c @ ks_vallelunga-extended_circuit",
+   "carro": "=mclaren_mp412c",
+   "pista": "=ks_vallelunga-extended_circuit",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "I1 event1: Race McLaren MP4-12C at Vallelunga"
+   ],
+   "nivel_ia_carreira": 92
+  },
+  {
+   "nome": "mclaren_mp412c @ mugello",
+   "carro": "=mclaren_mp412c",
+   "pista": "=mugello",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "I1 event2: Race McLaren MP4-12C at Mugello"
+   ],
+   "nivel_ia_carreira": 92
+  },
+  {
+   "nome": "mclaren_mp412c @ ks_nurburgring-layout_gp_b",
+   "carro": "=mclaren_mp412c",
+   "pista": "=ks_nurburgring-layout_gp_b",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "I1 event3: Race McLaren MP4-12C at Nurburgring GP"
+   ],
+   "nivel_ia_carreira": 94
+  },
+  {
+   "nome": "mclaren_mp412c @ ks_silverstone-gp",
+   "carro": "=mclaren_mp412c",
+   "pista": "=ks_silverstone-gp",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "I1 event4: Race McLaren MP4-12C at Silverstone"
+   ],
+   "nivel_ia_carreira": 96
+  },
+  {
+   "nome": "mclaren_mp412c @ monza",
+   "carro": "=mclaren_mp412c",
+   "pista": "=monza",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "I1 event5: Race McLaren MP4-12C at Monza"
+   ],
+   "nivel_ia_carreira": 96
+  },
+  {
+   "nome": "mercedes_sls @ ks_nurburgring-layout_gp_a",
+   "carro": "=mercedes_sls",
+   "pista": "=ks_nurburgring-layout_gp_a",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "I2 event1: Race Mercedes AMG SLS at Nurburgring GP"
+   ],
+   "nivel_ia_carreira": 92
+  },
+  {
+   "nome": "mercedes_sls @ imola",
+   "carro": "=mercedes_sls",
+   "pista": "=imola",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "I2 event2: Race Mercedes AMG SLS at Imola"
+   ],
+   "nivel_ia_carreira": 94
+  },
+  {
+   "nome": "mercedes_sls @ ks_silverstone-gp",
+   "carro": "=mercedes_sls",
+   "pista": "=ks_silverstone-gp",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "I2 event3: Race Mercedes AMG SLS at Silverstone"
+   ],
+   "nivel_ia_carreira": 94
+  },
+  {
+   "nome": "mercedes_sls @ spa",
+   "carro": "=mercedes_sls",
+   "pista": "=spa",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "I2 event4: Race Mercedes AMG SLS at Spa Francorchamps"
+   ],
+   "nivel_ia_carreira": 96
+  },
+  {
+   "nome": "mercedes_sls @ monza",
+   "carro": "=mercedes_sls",
+   "pista": "=monza",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "I2 event5: Race Mercedes AMG SLS at Monza"
+   ],
+   "nivel_ia_carreira": 95
+  },
+  {
+   "nome": "ferrari_458 @ imola",
+   "carro": "=ferrari_458",
+   "pista": "=imola",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "I3 event1: TimeAttack Ferrari 458 Italia at Imola"
+   ],
+   "nivel_ia_carreira": 98
+  },
+  {
+   "nome": "ferrari_458 @ monza",
+   "carro": "=ferrari_458",
+   "pista": "=monza",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "I3 event2: Race Ferrari 458 Italia at Monza"
+   ],
+   "nivel_ia_carreira": 98
+  },
+  {
+   "nome": "ferrari_458 @ spa",
+   "carro": "=ferrari_458",
+   "pista": "=spa",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "I3 event3: Race Ferrari 458 Italia at Spa Francorchamps"
+   ],
+   "nivel_ia_carreira": 96
+  },
+  {
+   "nome": "ferrari_458 @ mugello",
+   "carro": "=ferrari_458",
+   "pista": "=mugello",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "I3 event4: Race Ferrari 458 Italia at Mugello"
+   ],
+   "nivel_ia_carreira": 98
+  },
+  {
+   "nome": "lotus_2_eleven @ monza",
+   "carro": "=lotus_2_eleven",
+   "pista": "=monza",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T1 event2: Race Lotus 2-11 at Monza"
+   ],
+   "nivel_ia_carreira": 96
+  },
+  {
+   "nome": "lotus_2_eleven @ imola",
+   "carro": "=lotus_2_eleven",
+   "pista": "=imola",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T1 event3: Race Lotus 2-11 at Imola"
+   ],
+   "nivel_ia_carreira": 95
+  },
+  {
+   "nome": "lotus_2_eleven @ mugello",
+   "carro": "=lotus_2_eleven",
+   "pista": "=mugello",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T1 event4: Race Lotus 2-11 at Mugello"
+   ],
+   "nivel_ia_carreira": 98
+  },
+  {
+   "nome": "ferrari_458_s3 @ monza",
+   "carro": "=ferrari_458_s3",
+   "pista": "=monza",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T2 event1: Race Ferrari 458 Italia at Monza",
+    "AT1 event1: Race Ferrari 458 Italia at Monza"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "ferrari_458_s3 @ mugello",
+   "carro": "=ferrari_458_s3",
+   "pista": "=mugello",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T2 event2: Race Ferrari 458 Italia at Mugello",
+    "AT1 event2: Race Ferrari 458 Italia at Mugello"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "ferrari_458_s3 @ ks_silverstone-gp",
+   "carro": "=ferrari_458_s3",
+   "pista": "=ks_silverstone-gp",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T2 event3: Race Ferrari 458 Italia at Silverstone",
+    "AT1 event3: Race Ferrari 458 Italia at Silverstone"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "ferrari_458_s3 @ spa",
+   "carro": "=ferrari_458_s3",
+   "pista": "=spa",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T2 event4: Race Ferrari 458 Italia at Spa Francorchamps",
+    "AT1 event4: Race Ferrari 458 Italia at Spa Francorchamps"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "ferrari_458_s3 @ imola",
+   "carro": "=ferrari_458_s3",
+   "pista": "=imola",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T2 event5: Race Ferrari 458 Italia at Imola",
+    "AT1 event5: Race Ferrari 458 Italia at Imola"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "ferrari_458_s3 @ ks_nurburgring-layout_gp_a",
+   "carro": "=ferrari_458_s3",
+   "pista": "=ks_nurburgring-layout_gp_a",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T2 event6: Race Ferrari 458 Italia at Nurburgring GP",
+    "AT1 event6: Race Ferrari 458 Italia at Nurburgring GP"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "tatuusfa1 @ magione",
+   "carro": "=tatuusfa1",
+   "pista": "=magione",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T3 event1: Race F.Abarth at Magione",
+    "AT2 event1: Race F.Abarth at Magione"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "tatuusfa1 @ ks_vallelunga-extended_circuit",
+   "carro": "=tatuusfa1",
+   "pista": "=ks_vallelunga-extended_circuit",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T3 event2: Race F.Abarth at Vallelunga",
+    "AT2 event2: Race F.Abarth at Vallelunga"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "tatuusfa1 @ mugello",
+   "carro": "=tatuusfa1",
+   "pista": "=mugello",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T3 event3: Race F.Abarth at Mugello",
+    "AT2 event3: Race F.Abarth at Mugello"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "tatuusfa1 @ ks_nurburgring-layout_gp_a",
+   "carro": "=tatuusfa1",
+   "pista": "=ks_nurburgring-layout_gp_a",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T3 event4: Race F.Abarth at Nurburgring GP",
+    "AT2 event4: Race F.Abarth at Nurburgring GP"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "tatuusfa1 @ imola",
+   "carro": "=tatuusfa1",
+   "pista": "=imola",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T3 event5: Race F.Abarth at Imola",
+    "AT2 event5: Race F.Abarth at Imola"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "tatuusfa1 @ ks_silverstone-gp",
+   "carro": "=tatuusfa1",
+   "pista": "=ks_silverstone-gp",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T3 event6: Race F.Abarth at Silverstone",
+    "AT2 event6: Race F.Abarth at Silverstone"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "tatuusfa1 @ monza",
+   "carro": "=tatuusfa1",
+   "pista": "=monza",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T3 event7: Race F.Abarth at Monza",
+    "AT2 event7: Race F.Abarth at Monza"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "tatuusfa1 @ spa",
+   "carro": "=tatuusfa1",
+   "pista": "=spa",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T3 event8: Race F.Abarth at Spa Francorchamps",
+    "AT2 event8: Race F.Abarth at Spa Francorchamps"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "ferrari_599xxevo @ magione",
+   "carro": "=ferrari_599xxevo",
+   "pista": "=magione",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T4 event1: Race Ferrari 599XX EVO at Magione",
+    "AT3 event1: Race Ferrari 599XX EVO at Magione"
+   ],
+   "nivel_ia_carreira": 92
+  },
+  {
+   "nome": "ferrari_599xxevo @ ks_vallelunga-extended_circuit",
+   "carro": "=ferrari_599xxevo",
+   "pista": "=ks_vallelunga-extended_circuit",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T4 event2: Race Ferrari 599XX EVO at Vallelunga",
+    "AT3 event2: Race Ferrari 599XX EVO at Vallelunga"
+   ],
+   "nivel_ia_carreira": 95
+  },
+  {
+   "nome": "ferrari_599xxevo @ mugello",
+   "carro": "=ferrari_599xxevo",
+   "pista": "=mugello",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T4 event3: Race Ferrari 599XX EVO at Mugello",
+    "AT3 event3: Race Ferrari 599XX EVO at Mugello",
+    "H1 event2: Race Ferrari 599XX EVO at Mugello"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "ferrari_599xxevo @ ks_nurburgring-layout_gp_a",
+   "carro": "=ferrari_599xxevo",
+   "pista": "=ks_nurburgring-layout_gp_a",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T4 event4: Race Ferrari 599XX EVO at Nurburgring GP",
+    "AT3 event4: Race Ferrari 599XX EVO at Nurburgring GP"
+   ],
+   "nivel_ia_carreira": 96
+  },
+  {
+   "nome": "ferrari_599xxevo @ imola",
+   "carro": "=ferrari_599xxevo",
+   "pista": "=imola",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T4 event5: Race Ferrari 599XX EVO at Imola",
+    "AT3 event5: Race Ferrari 599XX EVO at Imola"
+   ],
+   "nivel_ia_carreira": 96
+  },
+  {
+   "nome": "ferrari_599xxevo @ ks_silverstone-gp",
+   "carro": "=ferrari_599xxevo",
+   "pista": "=ks_silverstone-gp",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T4 event6: Race Ferrari 599XX EVO at Silverstone",
+    "AT3 event6: Race Ferrari 599XX EVO at Silverstone"
+   ],
+   "nivel_ia_carreira": 98
+  },
+  {
+   "nome": "ferrari_599xxevo @ monza",
+   "carro": "=ferrari_599xxevo",
+   "pista": "=monza",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T4 event7: Race Ferrari 599XX EVO at Monza",
+    "AT3 event7: Race Ferrari 599XX EVO at Monza"
+   ],
+   "nivel_ia_carreira": 98
+  },
+  {
+   "nome": "ferrari_599xxevo @ spa",
+   "carro": "=ferrari_599xxevo",
+   "pista": "=spa",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "T4 event8: Race Ferrari 599XX EVO at Spa Francorchamps",
+    "AT3 event8: Race Ferrari 599XX EVO at Spa Francorchamps"
+   ],
+   "nivel_ia_carreira": 98
+  },
+  {
+   "nome": "ferrari_f40_s3 @ ks_vallelunga-extended_circuit",
+   "carro": "=ferrari_f40_s3",
+   "pista": "=ks_vallelunga-extended_circuit",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "H1 event1: Time Attack Ferrari F40 S3 at Vallelunga"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "ferrari_599xxevo @ ks_nurburgring-layout_gp_b",
+   "carro": "=ferrari_599xxevo",
+   "pista": "=ks_nurburgring-layout_gp_b",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "H1 event3: Race Ferrari 599XX EVO at Nurburgring GP"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "pagani_zonda_r @ ks_silverstone-gp",
+   "carro": "=pagani_zonda_r",
+   "pista": "=ks_silverstone-gp",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "H1 event4: Race Pagani Zonda R at Silverstone"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "pagani_zonda_r @ imola",
+   "carro": "=pagani_zonda_r",
+   "pista": "=imola",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "H1 event5: Race Pagani Zonda R  at Imola"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "pagani_huayra @ monza",
+   "carro": "=pagani_huayra",
+   "pista": "=monza",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "H1 event6: Race Pagani Huayra  at Monza"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "ferrari_laferrari @ spa",
+   "carro": "=ferrari_laferrari",
+   "pista": "=spa",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "H1 event7: Race Ferrari LaFerrari at Spa"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "bmw_z4_gt3 @ ks_vallelunga-extended_circuit",
+   "carro": "=bmw_z4_gt3",
+   "pista": "=ks_vallelunga-extended_circuit",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT1 event2: Race BMW Z4 GT3 at Vallelunga",
+    "GT2 event2: Race BMW Z4 GT3 at Vallelunga",
+    "GT2X event2: Race weekend 40L BMW Z4 GT3 at Vallelunga"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "mclaren_mp412c_gt3 @ ks_silverstone-gp",
+   "carro": "=mclaren_mp412c_gt3",
+   "pista": "=ks_silverstone-gp",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT1 event3: Race McLaren MP4 GT3 at Silverstone",
+    "GT3 event3: Race McLaren MP4 GT3 at Silverstone",
+    "GT3X event3: Race weekend 25L  McLaren MP4 GT3 at Silverstone"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "mclaren_mp412c_gt3 @ mugello",
+   "carro": "=mclaren_mp412c_gt3",
+   "pista": "=mugello",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT1 event4: Race McLaren MP4 GT3 at Mugello",
+    "GT3 event4: Race McLaren MP4 GT3 at Mugello",
+    "GT3X event4: Race weekend 30L McLaren MP4 GT3 at Mugello"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "mercedes_sls_gt3 @ imola",
+   "carro": "=mercedes_sls_gt3",
+   "pista": "=imola",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT1 event5: Race Mercedes SLS GT3 at Imola",
+    "GT4X event5: Race weekend 30L Mercedes SLS GT3 at Imola",
+    "GT4 event5: Race Mercedes SLS GT3 at Imola"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "mercedes_sls_gt3 @ monza",
+   "carro": "=mercedes_sls_gt3",
+   "pista": "=monza",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT1 event6: Race Mercedes SLS GT3 at Monza",
+    "GT4X event6: Race weekend 27L Mercedes SLS GT3 at Monza",
+    "GT4 event6: Race Mercedes SLS GT3 at Monza"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "p4-5_2011 @ spa",
+   "carro": "=p4-5_2011",
+   "pista": "=spa",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT1 event7: Race P45 Competizione at Spa Francorchamps"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "bmw_z4_gt3 @ ks_nurburgring-layout_gp_b",
+   "carro": "=bmw_z4_gt3",
+   "pista": "=ks_nurburgring-layout_gp_b",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT2 event1: Race BMW Z4 GT3 at Nurburgring GP"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "bmw_z4_gt3 @ ks_silverstone-gp",
+   "carro": "=bmw_z4_gt3",
+   "pista": "=ks_silverstone-gp",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT2 event3: Race BMW Z4 GT3 at Silverstone",
+    "GT2X event3: Race weekend 25L BMW Z4 GT3 at Silverstone"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "bmw_z4_gt3 @ mugello",
+   "carro": "=bmw_z4_gt3",
+   "pista": "=mugello",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT2 event4: Race BMW Z4 GT3 at Mugello",
+    "GT2X event4: Race weekend 30L BMW Z4 GT3 at Mugello"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "bmw_z4_gt3 @ imola",
+   "carro": "=bmw_z4_gt3",
+   "pista": "=imola",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT2 event5: Race BMW Z4 GT3 at Imola",
+    "GT2X event5: Race weekend 30L BMW Z4 GT3 at Imola"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "bmw_z4_gt3 @ monza",
+   "carro": "=bmw_z4_gt3",
+   "pista": "=monza",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT2 event6: Race BMW Z4 GT3 at Monza",
+    "GT2X event6: Race weekend 27L BMW Z4 GT3 at Monza"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "bmw_z4_gt3 @ spa",
+   "carro": "=bmw_z4_gt3",
+   "pista": "=spa",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT2 event7: Race BMW Z4 GT3 at Spa Francorchamps",
+    "GT2X event7: Race weekend 25L BMW Z4 GT3 at Spa Francorchamps"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "mclaren_mp412c_gt3 @ ks_nurburgring-layout_gp_b",
+   "carro": "=mclaren_mp412c_gt3",
+   "pista": "=ks_nurburgring-layout_gp_b",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT3 event1: Race McLaren MP4 GT3 at Nurburgring GP"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "mclaren_mp412c_gt3 @ ks_vallelunga-extended_circuit",
+   "carro": "=mclaren_mp412c_gt3",
+   "pista": "=ks_vallelunga-extended_circuit",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT3 event2: Race McLaren MP4 GT3 at Vallelunga",
+    "GT3X event2: Race weekend 40L  McLaren MP4 GT3 at Vallelunga"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "mclaren_mp412c_gt3 @ imola",
+   "carro": "=mclaren_mp412c_gt3",
+   "pista": "=imola",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT3 event5: Race McLaren MP4 GT3 at Imola",
+    "GT3X event5: Race weekend 30L McLaren MP4 GT3 at Imola"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "mclaren_mp412c_gt3 @ monza",
+   "carro": "=mclaren_mp412c_gt3",
+   "pista": "=monza",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT3 event6: Race McLaren MP4 GT3 at Monza",
+    "GT3X event6: Race weekend 27L McLaren MP4 GT3 at Monza"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "mclaren_mp412c_gt3 @ spa",
+   "carro": "=mclaren_mp412c_gt3",
+   "pista": "=spa",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT3 event7: Race McLaren MP4 GT3 at Spa Francorchamps",
+    "GT3X event7: Race weekend 25L McLaren MP4 GT3 at Spa Francorchamps"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "bmw_m3_gt2 @ ks_nurburgring-layout_gp_b",
+   "carro": "=bmw_m3_gt2",
+   "pista": "=ks_nurburgring-layout_gp_b",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT5 event1: Race BMW M3 GT2 at Nurburgring GP"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "bmw_m3_gt2 @ ks_vallelunga-extended_circuit",
+   "carro": "=bmw_m3_gt2",
+   "pista": "=ks_vallelunga-extended_circuit",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT5 event2: Race BMW M3 GT2 at Vallelunga",
+    "GT5X event2: Race weekend 45L BMW M3 GT2 at Vallelunga"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "bmw_m3_gt2 @ ks_silverstone-gp",
+   "carro": "=bmw_m3_gt2",
+   "pista": "=ks_silverstone-gp",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT5 event3: Race BMW M3 GT2 at Silverstone",
+    "GT5X event3: Race weekend 30L BMW M3 GT2 at Silverstone"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "bmw_m3_gt2 @ mugello",
+   "carro": "=bmw_m3_gt2",
+   "pista": "=mugello",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT5 event4: Race BMW M3 GT2 at Mugello",
+    "GT5X event4: Race weekend 35L BMW M3 GT2 at Mugello"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "bmw_m3_gt2 @ imola",
+   "carro": "=bmw_m3_gt2",
+   "pista": "=imola",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT5 event5: Race BMW M3 GT2 at Imola",
+    "GT5X event5: Race weekend 35L BMW M3 GT2 at Imola"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "bmw_m3_gt2 @ monza",
+   "carro": "=bmw_m3_gt2",
+   "pista": "=monza",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT5 event6: Race BMW M3 GT2 at Monza",
+    "GT5X event6: Race weekend 32L BMW M3 GT2 at Monza"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "bmw_m3_gt2 @ spa",
+   "carro": "=bmw_m3_gt2",
+   "pista": "=spa",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT5 event7: Race BMW M3 GT2 at Spa Francorchamps",
+    "GT5X event7: Race weekend 30L BMW M3 GT2 at Spa Francorchamps"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "ferrari_458_gt2 @ ks_nurburgring-layout_gp_b",
+   "carro": "=ferrari_458_gt2",
+   "pista": "=ks_nurburgring-layout_gp_b",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT6 event1: Race Ferrari 458 GT2 at Nurburgring GP"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "ferrari_458_gt2 @ ks_vallelunga-extended_circuit",
+   "carro": "=ferrari_458_gt2",
+   "pista": "=ks_vallelunga-extended_circuit",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT6 event2: Race Ferrari 458 GT2 at Vallelunga",
+    "GT6X event2: Race weekend 45L Ferrari 458 GT2 at Vallelunga"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "ferrari_458_gt2 @ ks_silverstone-gp",
+   "carro": "=ferrari_458_gt2",
+   "pista": "=ks_silverstone-gp",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT6 event3: Race Ferrari 458 GT2 at Silverstone",
+    "GT6X event3: Race weekend 30L Ferrari 458 GT2 at Silverstone"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "ferrari_458_gt2 @ mugello",
+   "carro": "=ferrari_458_gt2",
+   "pista": "=mugello",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT6 event4: Race Ferrari 458 GT2 at Mugello",
+    "GT6X event4: Race weekend 35L Ferrari 458 GT2 at Mugello"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "ferrari_458_gt2 @ imola",
+   "carro": "=ferrari_458_gt2",
+   "pista": "=imola",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT6 event5: Race Ferrari 458 GT2 at Imola",
+    "GT6X event5: Race weekend 35L Ferrari 458 GT2 at Imola"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "ferrari_458_gt2 @ monza",
+   "carro": "=ferrari_458_gt2",
+   "pista": "=monza",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT6 event6: Race Ferrari 458 GT2 at Monza",
+    "GT6X event6: Race weekend 32L Ferrari 458 GT2 at Monza"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "ferrari_458_gt2 @ spa",
+   "carro": "=ferrari_458_gt2",
+   "pista": "=spa",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT6 event7: Race Ferrari 458 GT2 at Spa Francorchamps",
+    "GT6X event7: Race weekend 30L Ferrari 458 GT2 at Spa Francorchamps"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "mercedes_sls_gt3 @ ks_nurburgring-layout_gp_a",
+   "carro": "=mercedes_sls_gt3",
+   "pista": "=ks_nurburgring-layout_gp_a",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT4X event1: Race weekend 30L Mercedes SLS GT3 at Nurburgring GP"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "mercedes_sls_gt3 @ ks_vallelunga-extended_circuit",
+   "carro": "=mercedes_sls_gt3",
+   "pista": "=ks_vallelunga-extended_circuit",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT4X event2: Race weekend 40L Mercedes SLS GT3 at Vallelunga",
+    "GT4 event2: Race Mercedes SLS GT3 at Vallelunga"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "mercedes_sls_gt3 @ ks_silverstone-gp",
+   "carro": "=mercedes_sls_gt3",
+   "pista": "=ks_silverstone-gp",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT4X event3: Race weekend 25L Mercedes SLS GT3 at Silverstone",
+    "GT4 event3: Race Mercedes SLS GT3 at Silverstone"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "mercedes_sls_gt3 @ mugello",
+   "carro": "=mercedes_sls_gt3",
+   "pista": "=mugello",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT4X event4: Race weekend 30L Mercedes SLS GT3 at Mugello",
+    "GT4 event4: Race Mercedes SLS GT3 at Mugello"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "mercedes_sls_gt3 @ spa",
+   "carro": "=mercedes_sls_gt3",
+   "pista": "=spa",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT4X event7: Race weekend 25L Mercedes SLS GT3 at Spa Francorchamps",
+    "GT4 event7: Race Mercedes SLS GT3 at Spa Francorchamps"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "bmw_m3_gt2 @ ks_nurburgring-layout_gp_a",
+   "carro": "=bmw_m3_gt2",
+   "pista": "=ks_nurburgring-layout_gp_a",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT5X event1: Race weekend 35L BMW M3 GT2 at Nurburgring GP"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "lotus_49 @ ks_silverstone-national",
+   "carro": "=lotus_49",
+   "pista": "=ks_silverstone-national",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "F1 event1: Time Attack Lotus type 49 at Silvestone National"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "lotus_49 @ ks_monza66-road",
+   "carro": "=lotus_49",
+   "pista": "=ks_monza66-road",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "F1 event2: Race Lotus type 49 at Monza 1966"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "ferrari_312t @ imola",
+   "carro": "=ferrari_312t",
+   "pista": "=imola",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "F1 event3: Race Ferrari 312T at Imola"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "lotus_exos_125 @ ks_silverstone-gp",
+   "carro": "=lotus_exos_125",
+   "pista": "=ks_silverstone-gp",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "F1 event4: Time Attack Lotus Exos at Silverstone"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "lotus_exos_125_s1 @ mugello",
+   "carro": "=lotus_exos_125_s1",
+   "pista": "=mugello",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "F1 event5: Race Lotus Exos 125 S1 at Mugello"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "lotus_98t @ spa",
+   "carro": "=lotus_98t",
+   "pista": "=spa",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "F1 event6: Race Classic Team Lotus 98T at Spa Francorchamps"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "ferrari_458_gt2 @ ks_nurburgring-layout_gp_a",
+   "carro": "=ferrari_458_gt2",
+   "pista": "=ks_nurburgring-layout_gp_a",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT6X event1: Race weekend 35L Ferrari 458 GT2 at Nurburgring GP"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "mercedes_sls_gt3 @ ks_nurburgring-layout_gp_b",
+   "carro": "=mercedes_sls_gt3",
+   "pista": "=ks_nurburgring-layout_gp_b",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT4 event1: Race Mercedes SLS GT3 at Nurburgring GP"
+   ],
+   "nivel_ia_carreira": 100
+  },
+  {
+   "nome": "mclaren_mp412c_gt3 @ ks_nurburgring-layout_gp_a",
+   "carro": "=mclaren_mp412c_gt3",
+   "pista": "=ks_nurburgring-layout_gp_a",
+   "tempo_profissional": "",
+   "fonte": "",
+   "eventos_carreira": [
+    "GT3X event1: Race weekend 30L McLaren MP4 GT3 at Nurburgring GP"
+   ],
+   "nivel_ia_carreira": 100
+  }
+ ]
+}
