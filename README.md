@@ -5,7 +5,9 @@
 
 [English](#english) · [Português](#português)
 
-![AC Coach Lovely dash layout](docs/simhub-dash.png)
+| SimHub dash / Dash do SimHub | Layout (widget placeholders / espaços dos widgets) |
+|---|---|
+| ![AC Coach Lovely dash](docs/simhub-dash.png) | ![AC Coach Lovely layout](docs/simhub-dash-layout.png) |
 
 ---
 
